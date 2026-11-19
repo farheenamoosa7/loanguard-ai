@@ -255,25 +255,23 @@ st.markdown("""
 [data-testid="stSidebar"] [data-testid="stCaptionContainer"] p {
     color: #cbd5e1 !important;
 }
-/* Alert / disclaimer readability */
+/* Alert / disclaimer readability - force readable contrast */
 [data-testid="stAlert"] {
     background-color: #e8f1ed !important;
     border: 1px solid #475569 !important;
-}
-
-[data-testid="stAlert"] p,
-[data-testid="stAlert"] div,
-[data-testid="stAlert"] span {
     color: #172033 !important;
 }
+[data-testid="stAlert"] p,
+[data-testid="stAlert"] [data-testid="stMarkdownContainer"],
+[data-testid="stAlert"] [data-testid="stMarkdownContainer"] p,
+[data-testid="stAlert"] span,
+[data-testid="stAlert"] div,
+[data-testid="stAlert"] svg {
+    color: #172033 !important;
+    fill: #172033 !important;
 }
 h1, h2, h3 {
     color: #f8fafc !important;
-}.stApp p,
-.stApp span,
-.stApp label,
-.stMarkdown {
-    color: #e5eaf4 !important;
 }
 label {
     color: #e5eaf4 !important;
