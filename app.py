@@ -30,6 +30,15 @@ h1, h2, h3 {
 
 label {
     color: #E2E8F0 !important;
+}/* Disclaimer readability */
+[data-testid="stAlert"] {
+    background-color: #1E293B !important;
+    color: #F8FAFC !important;
+    border: 1px solid #475569 !important;
+}
+
+[data-testid="stAlert"] p {
+    color: #F8FAFC !important;
 }
 </style>
 """, unsafe_allow_html=True)
