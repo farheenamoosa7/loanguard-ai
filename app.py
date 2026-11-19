@@ -1,6 +1,39 @@
 import streamlit as st
 import pandas as pd
 
+# LoanGuard AI - Readability Improvements
+st.markdown("""
+<style>
+[data-testid="stMetric"] {
+    background-color: #1E293B;
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+}
+
+[data-testid="stMetricLabel"] {
+    color: #CBD5E1 !important;
+}
+
+[data-testid="stMetricValue"] {
+    color: #F8FAFC !important;
+    font-weight: 700 !important;
+}
+
+.stMarkdown, .stText, p, li {
+    color: #E2E8F0;
+}
+
+h1, h2, h3 {
+    color: #F8FAFC !important;
+}
+
+label {
+    color: #E2E8F0 !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 st.set_page_config(
     page_title="LoanGuard AI",
     page_icon="🛡️",
