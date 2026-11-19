@@ -1,96 +1,117 @@
-import streamlit as st
-import pandas as pd
+)
+    st.write(
+        "Data complete:",
+        "Yes" if selected_case["data_complete"] else "No"
+    )
 
-st.set_page_config(
-    page_title="LoanGuard AI",
-    page_icon="🛡️",
-    layout="wide"
+run_button = st.button("🔎 Run Governance Audit", use_container_width=True)
+
+if run_button:
+    report = run_governance_agent(selected_case)
+
+    st.markdown("---")
+    st.markdown("## 📋 Audit Report")
+
+    if report["final_status"] == "HUMAN REVIEW REQUIRED":
+        st.error("⚠️ HUMAN REVIEW REQUIRED")
+    else:
+        st.success("No flags detected — this is NOT a clearance.")
+
+    # Agent activity
+    st.markdown("### ⚙️ Agent Activity")
+    for step in report["activity_log"]:
+        st.markdown(f"✓ {step}")
+
+    # Findings
+    st.markdown("### 🚩 Governance Findings")
+    if report["all_findings"]:
+        for finding in report["all_findings"]:
+            st.warning(finding)
+    else:
+        st.success("No governance findings identified by current checks.")
+
+    # Financial analysis
+    st.markdown("### 📊 Financial Indicators")
+
+    financial = report["financial_analysis"]
+
+    f1, f2, f3 = st.columns(3)
+
+    f1.metric(
+        "Monthly Income",
+        f"₹{financial['monthly_income']:,.0f}"
+    )
+
+    f2.metric(
+        "Debt-to-Income Ratio",
+        (
+            f"{financial['debt_to_income_ratio'] * 100:.1f}%"
+            if financial["debt_to_income_ratio"] is not None
+            else "Unavailable"
+        )
+    )
+
+    f3.metric(
+        "Loan / Annual Income",
+        (
+            f"{financial['loan_to_annual_income_ratio']:.2f}x"
+            if financial["loan_to_annual_income_ratio"] is not None
+            else "Unavailable"
+        )
+    )
+
+    st.markdown("### 🧾 Tool Results")
+
+    with st.expander("Data Quality Checker"):
+        st.json(report["data_quality"])
+
+    with st.expander("Financial Indicator Checker"):
+        st.json(report["financial_analysis"])
+
+    with st.expander("Policy Consistency Checker"):
+        st.json(report["policy_analysis"])
+
+# -----------------------------
+# ALL CASES TABLE
+# -----------------------------
+st.markdown("---")
+st.markdown("## 📁 Test Case Overview")
+
+overview = []
+
+for case in loan_cases:
+    r = run_governance_agent(case)
+    overview.append({
+        "Case": case["case_id"],
+        "AI Decision": case["ai_decision"],
+        "Audit Status": r["final_status"],
+        "Findings": len(r["all_findings"])
+    })
+
+st.dataframe(
+    pd.DataFrame(overview),
+    use_container_width=True,
+    hide_index=True
 )
 
-
 # -----------------------------
-# CONSOLIDATED READABILITY STYLES
+# LIMITATIONS
 # -----------------------------
-st.markdown("""
-<style>
-/* Main application background and text */
-.stApp {
-    background-color: #0B1120;
-    color: #E5EAF4;
-}
-.stMarkdown, .stText, p, li {
-    color: #E2E8F0;
-}
-h1, h2, h3 {
-    color: #F8FAFC !important;
-}
-label {
-    color: #E2E8F0 !important;
-}
+st.markdown("---")
+with st.expander("ℹ️ Limitations & Responsible Use"):
+    st.markdown("""
+    - All loan cases are simulated.
+    - Rules and financial thresholds are illustrative, not official lending policy.
+    - The system is rule-based and does not use a trained ML model or LLM.
+    - It does not assess actual borrower creditworthiness.
+    - It does not make lending decisions.
+    - A flag indicates a potential issue requiring verification, not proof of unfairness.
+    - No flags do not mean a case is safe, fair, compliant, or approved.
+    - Human review is necessary before any consequential decision.
+    """)
 
-/* Sidebar contrast: dark background with bright readable text */
-[data-testid="stSidebar"] {
-    background-color: #111827 !important;
-}
-[data-testid="stSidebar"] * {
-    color: #E5EAF4 !important;
-}
-[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p,
-[data-testid="stSidebar"] small,
-[data-testid="stSidebar"] label {
-    color: #D1D5DB !important;
-}
-
-/* Metric cards */
-[data-testid="stMetric"] {
-    background-color: #151F33 !important;
-    border: 1px solid #26354E !important;
-    padding: 16px !important;
-    border-radius: 12px !important;
-}
-[data-testid="stMetricLabel"] {
-    color: #CBD5E1 !important;
-}
-[data-testid="stMetricValue"] {
-    color: #F8FAFC !important;
-    font-weight: 700 !important;
-}
-
-/* Buttons */
-div[data-testid="stButton"] button {
-    background-color: #4779F5 !important;
-    color: #FFFFFF !important;
-    border-radius: 8px !important;
-    border: none !important;
-    height: 3em !important;
-    font-weight: bold !important;
-}
-
-/* Cards and spacing */
-.block-container {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-.audit-card {
-    background-color: #151F33;
-    border: 1px solid #26354E;
-    border-radius: 12px;
-    padding: 20px;
-}
-.small-muted {
-    color: #98A8C3 !important;
-}
-</style>
-""", unsafe_allow_html=True)
-
-
-# -----------------------------
-# SIMULATED LOAN CASES
-# -----------------------------
-loan_cases = [
-    {
-        "case_id": "LG-001",
-        "annual_income": 600000,
-        "monthly_debt": 5000,
-        "loan_amount": 200000,
-        "ai_decision": "Approved",
+st.markdown("---")
+st.caption(
+    "LoanGuard AI | Independent AI Governance Prototype | "
+    "Built for learning and demonstration purposes"
+)
