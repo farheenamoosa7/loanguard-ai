@@ -311,10 +311,24 @@ st.sidebar.markdown("---")
 st.sidebar.caption("Independent portfolio prototype · 2026")
 
 # -----------------------------
-# MAIN HEADER
-# -----------------------------
-st.markdown("# 🛡️ LoanGuard AI")
-st.markdown("### Lending Decision Governance Auditor")
+st.markdown(
+    """
+    <div style="
+        background-color: #1E293B;
+        color: #FFFFFF;
+        padding: 16px 20px;
+        border-left: 5px solid #60A5FA;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 500;
+    ">
+        <strong>DEMONSTRATION ONLY:</strong>
+        This prototype uses simulated data and illustrative thresholds.
+        It does not approve, reject, or determine loan eligibility.
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 st.markdown(
     "A prototype designed to examine AI-assisted lending decisions, "
     "identify governance concerns, and flag cases for human review."
