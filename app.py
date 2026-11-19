@@ -333,12 +333,6 @@ st.markdown(
     "A prototype designed to examine AI-assisted lending decisions, "
     "identify governance concerns, and flag cases for human review."
 )
-
-st.info(
-    "Demonstration only: this prototype uses simulated data and illustrative "
-    "thresholds. It does not approve, reject, or determine loan eligibility."
-)
-
 # -----------------------------
 # OVERVIEW METRICS
 # -----------------------------
