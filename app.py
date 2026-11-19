@@ -257,11 +257,15 @@ st.markdown("""
 }
 /* Alert / disclaimer readability */
 [data-testid="stAlert"] {
-    background-color: #1e293b !important;
+    background-color: #e8f1ed !important;
     border: 1px solid #475569 !important;
 }
-[data-testid="stAlert"] p {
-    color: #f8fafc !important;
+
+[data-testid="stAlert"] p,
+[data-testid="stAlert"] div,
+[data-testid="stAlert"] span {
+    color: #172033 !important;
+}
 }
 h1, h2, h3 {
     color: #f8fafc !important;
