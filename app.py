@@ -265,6 +265,11 @@ st.markdown("""
 }
 h1, h2, h3 {
     color: #f8fafc !important;
+}.stApp p,
+.stApp span,
+.stApp label,
+.stMarkdown {
+    color: #e5eaf4 !important;
 }
 label {
     color: #e5eaf4 !important;
