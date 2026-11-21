@@ -1,54 +1,41 @@
-# Hi, I'm Farheena Moosa 👋
 
-I'm an Economics graduate interested in AI governance, algorithmic fairness and responsible AI.
+# LoanGuard AI — Lending Governance Audit Prototype
 
-I currently work as a Real-Time Analyst at Invedus Private Limited, where my work involves monitoring autonomous driving operations, responding to unexpected situations, troubleshooting operational issues and escalating incidents when necessary.
+A rule-based prototype exploring governance checks in AI-assisted lending workflows. It is designed to flag inconsistencies, data-quality issues and cases that may require human review rather than making lending decisions automatically.
 
-My interest in AI governance comes from both my operational experience and independent research into fairness in automated financial decision-making.
+## Project Links
 
-## Interests
+🚀 [Launch Live Demo](https://loanguard-lending-audit.streamlit.app/)
 
-- AI Governance & Responsible AI
-- Algorithmic Fairness & Accountability
-- AI in Financial Decision-Making
-- Technology Policy
-- Human Oversight of Automated Systems
-- Operational Risk & AI Deployment
+💻 [View Source Code](https://github.com/farheenamoosa7/loanguard-ai)
 
-## Featured Projects
+📄 [Read the AI Lending Fairness Research Report](https://docs.google.com/document/d/1di9Rc-ValMne1h1O7Ro4_pZ6su9WMwmw/edit?usp=sharing)
 
-### LoanGuard AI — Lending Governance Audit Prototype
+## Purpose
 
-A rule-based prototype exploring governance checks in AI-assisted lending workflows. It identifies inconsistencies, data-quality issues and cases that may require human review rather than making lending decisions itself.
+This prototype explores how governance checks could be incorporated into AI-assisted lending workflows, with an emphasis on transparency, data quality, identifying inconsistencies and human oversight.
 
-- [🚀 Live Demo](https://loanguard-lending-audit.streamlit.app/)
-- [💻 Source Code](https://github.com/farheenamoosa7/loanguard-ai)
+## Features
 
-### Algorithmic Fairness in AI Lending — Independent Research
+- Simulated lending cases
+- Rule-based governance checks
+- Data-quality and inconsistency flags
+- Cases requiring additional review
+- Human-review emphasis rather than automated approval decisions
 
-Research examining how dynamic financial indicators and unequal financial-data availability may influence predictive performance and fairness in credit-risk models, using synthetic applicant data.
+## Technology
 
-- [📄 Final Research Report](https://docs.google.com/document/d/1di9Rc-ValMne1h1O7Ro4_pZ6su9WMwmw/edit?usp=sharing)
+- Python
+- Streamlit
 
-### Gender Inequality in Informal-Sector Employment — Undergraduate Group Research
+## Research Background
 
-Undergraduate group research exploring gender inequality and socio-economic issues in informal employment, including field-level data collection.
+This project is connected to my independent research on algorithmic fairness in AI lending, examining predictive performance, group outcomes and unequal financial-data availability using synthetic data.
 
-- [📄 Research PDF](https://drive.google.com/file/d/1DLslkVZIa4sPa66V78S_37VD2mZdSY0p/view?usp=sharing)
+## Limitations
 
-## Background
+This is an exploratory prototype and not a real credit-scoring or lending system. Its flags are illustrative and should not be treated as financial decisions.
 
-🎓 BA Economics — University of Calicut
+## Author
 
-💼 Real-Time Analyst — Invedus Private Limited
-
-🔎 Independent research in algorithmic fairness and lending governance
-
-## Currently Learning
-
-- Data analysis
-- Python and Google Colab
-- AI systems and governance
-- Responsible AI evaluation
-
-I'm interested in the practical side of AI governance: how systems are monitored, risks are identified, and automated decisions can be made more accountable.
+Farheena Moosa — Economics graduate interested in AI governance and responsible AI.
