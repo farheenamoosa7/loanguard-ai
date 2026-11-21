@@ -1,81 +1,54 @@
-# LoanGuard AI — Lending Governance Audit Prototype
+# Hi, I'm Farheena Moosa 👋
 
-**LoanGuard AI** is a beginner-built, rule-based prototype exploring how governance checks can help identify potential issues in AI-assisted lending workflows.
+I'm an Economics graduate interested in AI governance, algorithmic fairness and responsible AI.
 
-Rather than making lending decisions, it examines simulated cases and surfaces potential concerns for human review.
+I currently work as a Real-Time Analyst at Invedus Private Limited, where my work involves monitoring autonomous driving operations, responding to unexpected situations, troubleshooting operational issues and escalating incidents when necessary.
 
-🔗 **Live Demo:** https://loanguard-lending-audit.streamlit.app/  
-💻 **Source Code:** https://github.com/farheenamoosa7/loanguard-ai
+My interest in AI governance comes from both my operational experience and independent research into fairness in automated financial decision-making.
 
-## Why I built this
+## Interests
 
-AI governance principles such as transparency, accountability, data quality, and human oversight need to translate into practical processes.
+- AI Governance & Responsible AI
+- Algorithmic Fairness & Accountability
+- AI in Financial Decision-Making
+- Technology Policy
+- Human Oversight of Automated Systems
+- Operational Risk & AI Deployment
 
-I wanted to explore what this could look like operationally in a lending context: what happens when information is missing, financial inputs are invalid, a decision explanation is inconsistent, or a system produces an unexpected decision value?
+## Featured Projects
 
-## What the prototype checks
+### LoanGuard AI — Lending Governance Audit Prototype
 
-| Component | Purpose |
-|---|---|
-| Data Quality Checker | Flags incomplete, missing, or invalid data |
-| Financial Indicator Checker | Calculates illustrative financial indicators and flags threshold concerns |
-| Policy Consistency Checker | Identifies inconsistencies between case data, decisions, and explanations |
-| Human Review | Surfaces flagged cases requiring further investigation |
+A rule-based prototype exploring governance checks in AI-assisted lending workflows. It identifies inconsistencies, data-quality issues and cases that may require human review rather than making lending decisions itself.
 
-## Demonstration scenarios
+- [🚀 Live Demo](https://loanguard-lending-audit.streamlit.app/)
+- [💻 Source Code](https://github.com/farheenamoosa7/loanguard-ai)
 
-The prototype includes eight simulated cases covering:
+### Algorithmic Fairness in AI Lending — Independent Research
 
-- Baseline case
-- Multiple risk indicators
-- Incomplete information
-- Decision rationale inconsistency
-- Contradictory case information
-- Zero-income edge case
-- Negative financial input
-- Unrecognized decision value
+Research examining how dynamic financial indicators and unequal financial-data availability may influence predictive performance and fairness in credit-risk models, using synthetic applicant data.
 
-## Testing
+- [📄 Final Research Report](https://docs.google.com/document/d/1di9Rc-ValMne1h1O7Ro4_pZ6su9WMwmw/edit?usp=sharing)
 
-I manually tested eight simulated scenarios and recorded the governance findings produced by the prototype.
+### Gender Inequality in Informal-Sector Employment — Undergraduate Group Research
 
-Testing focused on whether designed data-quality issues, financial indicators, inconsistencies, and unexpected values were surfaced as intended.
+Undergraduate group research exploring gender inequality and socio-economic issues in informal employment, including field-level data collection.
 
-This was exploratory testing—not a formal independent validation.
+- [📄 Research PDF](https://drive.google.com/file/d/1DLslkVZIa4sPa66V78S_37VD2mZdSY0p/view?usp=sharing)
 
-## Design approach
+## Background
 
-- Rule-based checks rather than a trained machine-learning model
-- Transparent, predefined conditions
-- Simulated data rather than real borrower records
-- Governance findings rather than automated decisions
-- Human review rather than autonomous action
+🎓 BA Economics — University of Calicut
 
-## Limitations
+💼 Real-Time Analyst — Invedus Private Limited
 
-This is an educational prototype.
+🔎 Independent research in algorithmic fairness and lending governance
 
-- It does not make loan approval or rejection decisions.
-- All cases are simulated.
-- Thresholds are illustrative and not based on a real lending institution's policy.
-- A flagged condition is not proof of unfairness or regulatory non-compliance.
-- The prototype does not measure real-world model accuracy or fairness.
-- Absence of a flag does not mean a case is fair, safe, or compliant.
+## Currently Learning
 
-## What I learned
+- Data analysis
+- Python and Google Colab
+- AI systems and governance
+- Responsible AI evaluation
 
-Building this prototype helped me understand the gap between high-level AI governance principles and their practical implementation. It made me think about how monitoring, validation, escalation, documentation, and human oversight can be incorporated into operational workflows.
-
-My interest is in AI governance operations: making oversight processes practical, structured, and accountable.
-
-## Future work
-
-- Expand testing scenarios
-- Improve testing documentation and traceability
-- Explore fairness-related checks using synthetic data
-- Investigate escalation and accountability workflows
-- Explore how governance monitoring can be incorporated into AI-assisted decision systems
-
----
-
-*Built as an independent learning and exploratory AI governance project.*
+I'm interested in the practical side of AI governance: how systems are monitored, risks are identified, and automated decisions can be made more accountable.
